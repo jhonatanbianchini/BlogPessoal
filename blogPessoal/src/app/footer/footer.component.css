@@ -1,0 +1,30 @@
+/*Footer Socila Icons*/
+ul.social-network {
+    
+list-style: none;
+display: inline;
+padding: 0;
+background-color: darkgray;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    
+}
+.faFacebook, .faLinkedIn, .faInstagram{
+    color:white;
+}
+.faFacebook:hover{
+    color: #3b5998;
+}
+.faLinkedIn:hover{
+color: #0072b1;    
+}
+.faInstagram:hover{
+color: #c13584;
+}
+.row {
+    background-color: darkgray;
+} 

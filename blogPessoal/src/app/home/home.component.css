@@ -1,0 +1,11 @@
+p {
+ font-size: 20px;
+}
+.parallax{
+    background-image: url("https://i.ytimg.com/vi/uSruWlPobPY/maxresdefault.jpg");
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
