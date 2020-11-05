@@ -11,15 +11,15 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Seu email">
+                        placeholder="Seu email" [(ngModel)]='userLogin.usuario'>
                     <small id="emailHelp" class="form-text text-muted">Seu e-mail está seguro conosco.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"[(ngModel)]='userLogin.senha'>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-outline-sucess w-25">Entrar</button>
+                    <button type="submit" class="btn btn-outline-sucess w-25" (click)='entrar'>Entrar</button>
                 </div>
 
 
