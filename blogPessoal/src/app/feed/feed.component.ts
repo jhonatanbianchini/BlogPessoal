@@ -1,8 +1,12 @@
+  
+import { environment } from './../../environments/environment.prod'
+import { Router } from '@angular/router'
+import { AlertasService } from './../service/alertas.service'
+import { TemaService } from './../service/tema.service'
+import { PostagemService } from './../service/postagem.service'
+import { Postagem } from './../model/Postagem';
 import { Component, OnInit } from '@angular/core';
-import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
-import { PostagemService } from '../service/postagem.service';
-import { TemaService } from '../service/tema.service'
 
 @Component({
   selector: 'app-feed',
@@ -16,21 +20,30 @@ export class FeedComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
+  titulo: string
 
   tema: Tema = new Tema() 
   listaTemas: Tema[]
   idTema: number
+  nomeTema: string
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alerta: AlertasService,
+    private router: Router
   ) { }
 
   ngOnInit(){
+
+    
+
     window.scroll(0, 0)
 
     this.findAllPostagens()
     this.findAllTemas()
+    
+    
     
   }
 
@@ -55,7 +68,7 @@ export class FeedComponent implements OnInit {
       this.findAllPostagens()
     })
   }
-
+  }
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
@@ -71,5 +84,5 @@ export class FeedComponent implements OnInit {
   }
 
 }
-}
+
 
